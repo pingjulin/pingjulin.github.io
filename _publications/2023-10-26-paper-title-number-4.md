@@ -6,7 +6,6 @@ permalink: /publication/2023-10-26-paper-title-number-4
 date: 2023-10-26
 venue: 'Medicine and Science in Sports and Exercise'
 paperurl: 'https://europepmc.org/article/med/37882076'
-citation: 'Li, Z., Li, W., Lin, P. J., Jia, T., Ji, L., & Li, C. (2023). Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise. Medicine and Science in Sports and Exercise.'
 ---
 
 Purpose
