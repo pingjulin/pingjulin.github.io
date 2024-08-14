@@ -3,7 +3,6 @@ title: "A transferable deep learning prognosis model for predicting stroke patie
 collection: publications
 category: manuscripts
 permalink: /publication/2022-09-09-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
 date: 2022-09-09
 venue: 'IEEE Journal of Biomedical and Health Informatics'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/9882088'
