@@ -19,14 +19,14 @@ Work experience
 ======
 * Project Consultant
   * National Information Security Standardization Technical Committee
-  * Duties includes:
+  * Duties include:
   * 1. Advised the standard in EEG pre-processing procedure. (Brain-Computer Interface)
     2. Completed a chapter in the “White paper on the application of brain-computer interface technology in the medical and health field”
 
 * AI/ML Engineer Intern
   * Foxconn (Hon Hai Precision Industry)
-  * Duties included:
-  * 1. Developed an NLP (Nature language Processing) model to train the dialect language (Min-Nan) model with the data from the Pi-li company. The goal is to alternate the character's voices.
+  * Duties include:
+  * 1. Developed an NLP (Natural language Processing) model to train the dialect language (Min-Nan) model with the data from the Pi-li company. The goal is to alternate the character's voices.
     2. Programmed a Web Crawler to grip data from social media such as PTT, Dcard, and Facebook and visualize the public opinion poll.  
 
 Publications
