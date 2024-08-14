@@ -2,7 +2,7 @@
 title: "Quantitative assessment of motor function by an end-effector upper limb rehabilitation robot based on admittance control"
 collection: publications
 category: manuscripts
-permalink: /publication/paper-title-number-1
+permalink: /publication/2021-07-25-paper-title-number-1
 date: 2021-07-25
 venue: 'Applied Sciences'
 paperurl: 'https://www.mdpi.com/2076-3417/11/15/6854'
