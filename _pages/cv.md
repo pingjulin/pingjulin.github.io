@@ -41,4 +41,4 @@ Publications
 Professional Services
 ======
 * Journal Referee: iScience, Engineering Applications of Artificial Intelligence, Transactions on Neural Systems and Rehabilitation Engineering, Frontiers in Neurology, Scientific Reports.
-* Conference Referee: Knowledge Discovery and Data Mining(KDD). 
+* Conference Referee: ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD). 
