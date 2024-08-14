@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-More detail can see: [Ping-Ju Lin's CV](../assets/Ping-Ju Lin_CV.pdf)
+More detail can see [Ping-Ju Lin's CV](../assets/Ping-Ju Lin_CV.pdf)
 
 Education
 ======
@@ -40,5 +40,5 @@ Publications
   
 Professional Services
 ======
-*Journal Referee: iScience, Engineering applications of artificial intelligence, Transactions on Neural Systems and Rehabilitation Engineering, Frontiers in Neurology, Scientific Reports.
-*Conference Referee: KDD. 
+* Journal Referee: iScience, Engineering Applications of Artificial Intelligence, Transactions on Neural Systems and Rehabilitation Engineering, Frontiers in Neurology, Scientific Reports.
+* Conference Referee: Knowledge Discovery and Data Mining(KDD). 
