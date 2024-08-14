@@ -2,7 +2,7 @@
 title: "Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke"
 collection: publications
 category: manuscripts
-permalink: /publication/2023-11-13-paper-title-number-4
+permalink: /publication/2023-11-13-paper-title-number-5
 date: 2023-11-13
 venue: 'Journal of NeuroEngineering and Rehabilitation'
 paperurl: 'https://link.springer.com/article/10.1186/s12984-023-01276-8'
