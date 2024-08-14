@@ -1,19 +1,19 @@
 ---
-title: "Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise."
+title: "Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke"
 collection: publications
 category: manuscripts
-permalink: /publication/2023-10-26-paper-title-number-4
-date: 2023-10-26
-venue: 'Medicine and Science in Sports and Exercise'
-paperurl: 'https://europepmc.org/article/med/37882076'
-citation: 'Li, Z., Li, W., Lin, P. J., Jia, T., Ji, L., & Li, C. (2023). Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise. Medicine and Science in Sports and Exercise.'
+permalink: /publication/2023-11-13-paper-title-number-4
+date: 2023-11-13
+venue: 'Journal of NeuroEngineering and Rehabilitation'
+paperurl: 'https://link.springer.com/article/10.1186/s12984-023-01276-8'
+citation: 'Li, W., Li, C., Liu, A., Lin, P. J., Mo, L., Zhao, H., ... & Ji, L. (2023). Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke. Journal of NeuroEngineering and Rehabilitation, 20(1), 155.'
 ---
 
-Purpose
-This study aimed to evaluate whether motor-respiratory coupling exists in rhythmic isometric handgrip exercises and its effect on endurance performance. In addition, the mechanism underlying observed effects was to be investigated if higher motor-respiratory coupling rate could enhance endurance performance.
+Background
+Sensory stimulation can play a fundamental role in the activation of the primary sensorimotor cortex (S1-M1), which can promote motor learning and M1 plasticity in stroke patients. However, studies have focused mainly on investigating the influence of brain lesion profiles on the activation patterns of S1-M1 during motor tasks instead of sensory tasks. Therefore, the objective of this study is to explore the lesion-specific activation patterns due to different brain lesion profiles and types during focal vibration (FV).
 Methods
-Eleven subjects completed three rhythmic isometric handgrip trials to task failure in a randomized manner. After one pretraining session to determine personal grip frequency, one trial was performed without respiration requirement (CON), and two trials were performed with inspiration-motor coupling (IMC) or expiration-motor coupling. Changes in maximal voluntary contraction (MVC) and EMG were used to measure neuromuscular fatigue. Force data during test were used to assess exercise intensity. Another 10 subjects completed electrical stimulation-induced finger flexion and extension during normal inspiration, normal expiration, fast inspiration, fast expiration, and breath holding. Force changes of different breathing conditions were compared.
+In total 52 subacute stroke patients were recruited in this clinical experiment, including patients with basal ganglia hemorrhage/ischemia, brainstem ischemia, other subcortical ischemia, cortical ischemia, and mixed cortical–subcortical ischemia. Electroencephalograms (EEG) were recorded following a resting state lasting for 4 min and three sessions of FV. FV was applied over the muscle belly of the affected limb’s biceps for 3 min each session. Beta motor-related EEG power desynchronization overlying S1-M1 was used to indicate the activation of S1-M1, while the laterality coefficient (LC) of the activation of S1-M1 was used to assess the interhemispheric asymmetry of brain activation.
 Results
-Normalized exercise time to exhaustion was significantly longer in IMC (1.27 ± 0.23) compared with expiration-motor coupling (0.82 ± 0.18) and CON (0.91 ± 0.18, P < 0.001). ΔMVC, grip frequency, force, and EMG indices were not different among conditions (all P > 0.05). Electrical stimulation-induced finger extensor force was significant higher during fast inspiration (1.11 ± 0.09) than normal respiration (1.00 ± 0.05) and fast expiration (0.94 ± 0.08, P < 0.05).
+(1) Regarding brain lesion profiles, FV could lead to the significant activation of bilateral S1-M1 in patients with basal ganglia ischemia and other subcortical ischemia. The activation of ipsilesional S1-M1 in patients with brainstem ischemia was higher than that in patients with cortical ischemia. No activation of S1-M1 was observed in patients with lesions involving cortical regions. (2) Regarding brain lesion types, FV could induce the activation of bilateral S1-M1 in patients with basal ganglia hemorrhage, which was significantly higher than that in patients with basal ganglia ischemia. Additionally, LC showed no significant correlation with the modified Barthel index (MBI) in all patients, but a positive correlation with MBI in patients with basal ganglia lesions.
 Conclusions
-IMC is an effective way to improve endurance performance of rhythmic handgrip exercise. This is likely due to a reduction in the energy consumption of motion control, as evidenced by similar peripheral fatigue in different conditions and modulation of corticospinal excitability by respiration.
+These results reveal that sensory stimulation can induce lesion-specific activation patterns of S1-M1. This indicates FV could be applied in a personalized manner based on the lesion-specific activation of S1-M1 in stroke patients with different lesion profiles and types. Our study may contribute to a better understanding of the underlying mechanisms of cortical reorganization.
