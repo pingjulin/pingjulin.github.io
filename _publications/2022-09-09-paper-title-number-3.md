@@ -1,5 +1,5 @@
 ---
-title: "A transferable deep learning prognosis model for predicting stroke patients' recovery in different rehabilitation trainings"
+title: "Ctitle: "A transferable deep learning prognosis model for predicting stroke patients' recovery in different rehabilitation trainings""
 collection: publications
 category: manuscripts
 permalink: /publication/2022-09-09-paper-title-number-3
