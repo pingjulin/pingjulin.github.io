@@ -7,6 +7,8 @@ redirect_from:
   - /resume
 ---
 
+{% include base_path %}
+
 [#Ping-Ju Lin CV](../assets/Ping-Ju Lin_CV.pdf)
 
 Education
