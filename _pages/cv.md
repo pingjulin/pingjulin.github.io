@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[#Ping-Ju Lin CV](../assets/Ping-Ju Lin_CV.pdf)
+*[Ping-Ju Lin CV](../assets/Ping-Ju Lin_CV.pdf)
 
 Education
 ======
