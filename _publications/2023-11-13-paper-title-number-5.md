@@ -6,7 +6,6 @@ permalink: /publication/2023-11-13-paper-title-number-4
 date: 2023-11-13
 venue: 'Journal of NeuroEngineering and Rehabilitation'
 paperurl: 'https://link.springer.com/article/10.1186/s12984-023-01276-8'
-citation: 'Li, W., Li, C., Liu, A., Lin, P. J., Mo, L., Zhao, H., ... & Ji, L. (2023). Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke. Journal of NeuroEngineering and Rehabilitation, 20(1), 155.'
 ---
 
 Background
