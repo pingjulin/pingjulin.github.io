@@ -49,7 +49,9 @@
     top: 0;
     z-index: 20;
     min-height: 56px !important;
-    height: auto !important;
+    height: 56px !important;
+    max-height: 56px !important;
+    overflow: hidden !important;
     background: rgba(251, 251, 253, 0.86) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
     -webkit-backdrop-filter: saturate(180%) blur(18px);
@@ -63,12 +65,14 @@
 
   .masthead__inner-wrap {
     max-width: 1160px !important;
+    height: 56px !important;
     margin: 0 auto !important;
     padding: 0 24px !important;
   }
 
   .apple-nav {
-    min-height: 56px;
+    min-height: 0 !important;
+    height: 56px !important;
     display: flex !important;
     align-items: center;
     justify-content: space-between;
@@ -124,7 +128,7 @@
   #main {
     max-width: 1160px !important;
     margin: 0 auto !important;
-    padding: 48px 24px 64px !important;
+    padding: 28px 24px 64px !important;
     display: grid !important;
     grid-template-columns: 180px minmax(0, 820px) !important;
     gap: 64px !important;
@@ -189,7 +193,7 @@
   }
 
   .home-hero {
-    padding: 6px 0 40px !important;
+    padding: 0 0 34px !important;
   }
 
   .home-identity {
@@ -291,10 +295,18 @@
   @media screen and (max-width: 600px) {
     .masthead__inner-wrap {
       padding: 0 18px !important;
+      height: auto !important;
+    }
+
+    .masthead {
+      height: auto !important;
+      max-height: none !important;
+      overflow: visible !important;
     }
 
     .apple-nav {
       min-height: 64px;
+      height: auto !important;
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
