@@ -39,8 +39,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  height: auto;
+  height: 56px;
+  max-height: 56px;
   min-height: 56px;
+  overflow: hidden;
   background: rgba(251, 251, 253, 0.82);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
@@ -54,12 +56,14 @@ html[data-theme="dark"] .masthead {
 
 .masthead__inner-wrap {
   max-width: 1160px;
+  height: 56px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .apple-nav {
-  min-height: 56px;
+  height: 56px;
+  min-height: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +122,7 @@ html[data-theme="dark"] .masthead {
 #main {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 48px 24px 64px;
+  padding: 28px 24px 64px;
   display: grid;
   grid-template-columns: 180px minmax(0, 820px);
   gap: 64px;
@@ -185,7 +189,7 @@ html[data-theme="dark"] .masthead {
 }
 
 .home-hero {
-  padding: 2.3em 0 2.7em;
+  padding: 0 0 2.2em;
 }
 
 .home-hero--compact {
@@ -694,11 +698,19 @@ html[data-theme="dark"] .masthead {
   }
 
   .masthead__inner-wrap {
+    height: auto;
     padding: 0 18px;
+  }
+
+  .masthead {
+    height: auto;
+    max-height: none;
+    overflow: visible;
   }
 
   .apple-nav {
     min-height: 64px;
+    height: auto;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
