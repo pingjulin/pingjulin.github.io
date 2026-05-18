@@ -6,7 +6,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">Ping-Ju Lin's Homepage</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -17,6 +17,9 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
+        <div class="site-controls" aria-label="Display controls">
+          <button type="button" class="site-control site-control--theme" data-theme-toggle aria-label="Switch black and white theme">Dark</button>
+        </div>
       </nav>
     </div>
   </div>
