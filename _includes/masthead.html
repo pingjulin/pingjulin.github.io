@@ -2,25 +2,19 @@
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">Ping-Ju Lin's Homepage</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-        <div class="site-controls" aria-label="Display controls">
-          <button type="button" class="site-control site-control--theme" data-theme-toggle aria-label="Switch black and white theme">Dark</button>
-        </div>
-      </nav>
-    </div>
+    <nav id="site-nav" class="apple-nav" aria-label="Main navigation">
+      <a class="apple-nav__brand" href="{{ base_path }}/">Ping-Ju Lin's Homepage</a>
+      <div class="apple-nav__links">
+        {% for link in site.data.navigation.main %}
+          {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+            {% else %}
+            {% assign domain = base_path %}
+          {% endif %}
+          <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+        <button type="button" class="site-control site-control--theme" data-theme-toggle aria-label="Switch black and white theme">Dark</button>
+      </div>
+    </nav>
   </div>
 </div>
