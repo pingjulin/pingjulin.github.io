@@ -201,7 +201,7 @@
   }
 
   .profile-links a {
-    color: var(--site-muted) !important;
+    color: var(--site-link) !important;
     font-size: 14px !important;
     text-decoration: none !important;
   }
@@ -482,6 +482,43 @@
         localStorage.setItem("site-theme", nextTheme);
         syncButtons();
       });
+    }
+
+    if (!themeButton) {
+      var navLinks = document.querySelector(".apple-nav__links");
+      if (navLinks) {
+        themeButton = document.createElement("button");
+        themeButton.type = "button";
+        themeButton.className = "site-control site-control--theme";
+        themeButton.setAttribute("data-theme-toggle", "");
+        themeButton.setAttribute("aria-label", "Switch black and white theme");
+        themeButton.addEventListener("click", function() {
+          var nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", nextTheme);
+          localStorage.setItem("site-theme", nextTheme);
+          syncButtons();
+        });
+        navLinks.appendChild(themeButton);
+      } else {
+        var visibleLinks = document.querySelector(".visible-links");
+        if (visibleLinks) {
+          var item = document.createElement("li");
+          item.className = "masthead__menu-item";
+          themeButton = document.createElement("button");
+          themeButton.type = "button";
+          themeButton.className = "site-control site-control--theme";
+          themeButton.setAttribute("data-theme-toggle", "");
+          themeButton.setAttribute("aria-label", "Switch black and white theme");
+          themeButton.addEventListener("click", function() {
+            var nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", nextTheme);
+            localStorage.setItem("site-theme", nextTheme);
+            syncButtons();
+          });
+          item.appendChild(themeButton);
+          visibleLinks.appendChild(item);
+        }
+      }
     }
 
     syncButtons();
