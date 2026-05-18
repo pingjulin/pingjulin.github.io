@@ -282,6 +282,13 @@ html[data-theme="dark"] .masthead {
 
 .home-section h2 {
   margin: 0 0 1.1em;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.home-section p {
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .home-focus-grid {
@@ -307,8 +314,8 @@ html[data-theme="dark"] .masthead {
   p {
     margin: 0;
     color: var(--site-muted);
-    font-size: 0.94rem;
-    line-height: 1.58;
+    font-size: 15px;
+    line-height: 1.6;
   }
 }
 
@@ -391,6 +398,10 @@ html[data-theme="dark"] .masthead {
 
 .author__avatar img {
   max-width: 112px;
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 50%;
   border: 0 !important;
   box-shadow: none;
 }
@@ -401,12 +412,15 @@ html[data-theme="dark"] .masthead {
 }
 
 .author__bio,
-.sidebar p,
-.sidebar li {
+.author__meta {
   color: var(--site-muted);
 }
 
-.author__urls {
+.profile-links {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+
   a {
     color: var(--site-muted);
     font-size: 0.84rem;
@@ -651,11 +665,8 @@ html[data-theme="dark"] .masthead {
     min-width: 0;
   }
 
-  .author__urls-wrapper {
+  .profile-links {
     grid-column: 1 / -1;
-  }
-
-  .author__urls {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.35em 1em;
@@ -725,6 +736,7 @@ html[data-theme="dark"] .masthead {
 
   .apple-nav__links {
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.55em 1.05em;
@@ -775,5 +787,52 @@ html[data-theme="dark"] .masthead {
   .publication-timeline p {
     text-align: left;
     font-size: 0.9rem;
+  }
+
+  .sidebar {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+  }
+
+  .author__avatar,
+  .author__avatar img {
+    width: 72px;
+    height: 72px;
+    max-width: 72px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .author__content {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .author__name {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .author__bio {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .author__meta {
+    display: block;
+    margin: 3px 0 0;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .profile-links {
+    grid-column: 1 / -1;
+    margin-top: 4px;
   }
 }
