@@ -6,31 +6,166 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="scholar-callout">
+    <p>For the most current citation record and newly indexed papers, visit my Google Scholar profile. The timeline below is organized in reverse chronological order from the publication list you provided.</p>
+    <a class="home-button" href="{{site.author.googlescholar}}">Google Scholar</a>
+  </div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<section class="publication-overview">
+  <h2>Publication Timeline</h2>
+  <div class="publication-timeline">
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TBME.jpg" alt="IEEE Transactions on Biomedical Engineering journal cover">
+        <div>
+          <h3>Structured and sparse partial least squares coherence for multivariate cortico-muscular analysis</h3>
+          <p><em>IEEE Transactions on Biomedical Engineering</em>. A structured sparse coherence method for multivariate cortico-muscular analysis.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/AD.jpg" alt="Alzheimer's & Dementia journal cover">
+        <div>
+          <h3>A vision-language foundation model for Alzheimer's disease diagnosis using MRI and clinical data</h3>
+          <p><em>Alzheimer's &amp; Dementia</em>. A multimodal foundation-model framework combining MRI and clinical data for Alzheimer's disease diagnosis.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TR.jpg" alt="IEEE Transactions on Robotics journal cover">
+        <div>
+          <h3>Design, Modeling, and Application of Bioinspired High-Force-Output Soft Pneumatic Bending Actuator</h3>
+          <p><em>IEEE Transactions on Robotics</em>. Bioinspired soft actuator design and modeling for high-force robotic applications.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover">
+        <div>
+          <h3>Multimodal behavioral data predict stroke patient's response to BCI treatment through explainable AI</h3>
+          <p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>. Explainable multimodal AI for predicting response to BCI-supported stroke rehabilitation.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover">
+        <div>
+          <h3>Beta-band corticomuscular coherence: a novel biomarker of functional corticospinal tract integrity and motor recovery after stroke</h3>
+          <p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>. Beta-band corticomuscular coherence as a biomarker of corticospinal integrity and motor recovery.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/AOL.jpg" alt="Acta Oto-Laryngologica journal cover">
+        <div>
+          <h3>Development and validation of a collaborative framework for assessment of peripheral facial paralysis using facial image regions of interest</h3>
+          <p><em>Acta Oto-Laryngologica</em>. A facial image ROI framework for peripheral facial paralysis assessment.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2025</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/AM.jpg" alt="Advanced Materials journal cover">
+        <div>
+          <h3>Bioinspired smart triboelectric soft pneumatic actuator-enabled hand rehabilitation robot</h3>
+          <p><em>Advanced Materials</em>. A smart soft pneumatic actuator-enabled robotic system for hand rehabilitation.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2024</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/Neurocomputing.jpg" alt="Neurocomputing journal cover">       
+        <div>
+          <h3>AM-EEGNet: An advanced multi-input deep learning framework for classifying stroke patient EEG task states</h3>
+          <p><em>Neurocomputing</em>. Multi-input EEG deep learning for stroke-patient task-state classification and model interpretation.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2024</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover">
+        <div>
+          <h3>Explainable deep-learning prediction for brain-computer interfaces supported lower extremity motor gains based on multistate fusion</h3>
+          <p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>. Multi-state EEG fusion for explainable BCI rehabilitation outcome prediction.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2024</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/MSSE.jpg" alt="Medicine & Science in Sports & Exercise journal cover">
+        <div>
+          <h3>Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise</h3>
+          <p><em>Medicine &amp; Science in Sports &amp; Exercise</em>. A study of motor-respiratory coupling and endurance performance.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2023</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/JBHI.jpg" alt="IEEE Journal of Biomedical and Health Informatics journal cover">
+        <div>
+          <h3>Multiscale canonical coherence for functional corticomuscular coupling analysis</h3>
+          <p><em>IEEE Journal of Biomedical and Health Informatics</em>. A multiscale framework for functional corticomuscular coupling analysis.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2023</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/JNER.jpg" alt="Journal of NeuroEngineering and Rehabilitation journal cover">
+        <div>
+          <h3>Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke</h3>
+          <p><em>Journal of NeuroEngineering and Rehabilitation</em>. EEG activation patterns after sensory stimulation in subacute stroke.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2022</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/JBHI.jpg" alt="IEEE Journal of Biomedical and Health Informatics journal cover">
+        <div>
+          <h3>A transferable deep learning prognosis model for predicting stroke patients' recovery in different rehabilitation trainings</h3>
+          <p><em>IEEE Journal of Biomedical and Health Informatics</em>. Transferable prognosis modeling for stroke recovery across rehabilitation settings.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2021</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover">
+        <div>
+          <h3>CNN-based prognosis of BCI rehabilitation using EEG from first session BCI training</h3>
+          <p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>. Early-session EEG prediction of BCI rehabilitation prognosis.</p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="publication-year">2021</div>
+      <div class="publication-card">
+        <img class="publication-image" src="/images/publications/AppliedScience.jpg" alt="Applied Science journal cover">
+        <div>
+          <h3>Quantitative assessment of motor function by an end-effector upper limb rehabilitation robot based on admittance control</h3>
+          <p><em>Applied Sciences</em>. Robot-assisted quantitative assessment of upper-limb motor function.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
