@@ -40,6 +40,7 @@
 
   body {
     color: var(--site-text) !important;
+    padding-top: 0 !important;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased;
   }
@@ -317,10 +318,7 @@
     }
 
     #main .sidebar {
-      display: grid !important;
-      grid-template-columns: 82px minmax(0, 1fr) !important;
-      gap: 18px !important;
-      align-items: center !important;
+      display: block !important;
     }
 
     .author__avatar,
@@ -328,10 +326,6 @@
       width: 82px !important;
       max-width: 82px !important;
       margin: 0 !important;
-    }
-
-    .profile-links {
-      grid-column: 1 / -1 !important;
     }
 
     .profile-links {
@@ -393,6 +387,10 @@
     }
 
     #main .sidebar {
+      display: block !important;
+    }
+
+    .profile-card {
       display: grid !important;
       grid-template-columns: 72px minmax(0, 1fr) !important;
       gap: 14px !important;
@@ -435,11 +433,7 @@
     }
 
     .profile-links {
-      grid-column: 1 / -1 !important;
-      display: grid !important;
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      gap: 6px 14px !important;
-      margin-top: 4px !important;
+      display: none !important;
     }
 
     .home-identity {
