@@ -42,8 +42,3 @@ redirect_from:
     </article>
   </div>
 </section>
-
-<section class="home-section home-contact">
-  <h2>Contact</h2>
-  <p><a href="mailto:pjlin14@pku.edu.cn">pjlin14@pku.edu.cn</a></p>
-</section>
