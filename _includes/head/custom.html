@@ -1,0 +1,25 @@
+{% include base_path %}
+
+<!-- start custom head snippets -->
+
+<link rel="icon" href="{{ base_path }}/images/favicon.ico">
+<link rel="shortcut icon" href="{{ base_path }}/images/favicon.ico">
+<link rel="apple-touch-icon" href="{{ base_path }}/images/site-logo.png">
+<link rel="manifest" href="{{ base_path }}/images/manifest.json">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="{{ base_path }}/images/site-logo.png">
+<meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml">
+<meta name="theme-color" content="#101d34">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
+
+<script>
+  (function () {
+    document.documentElement.setAttribute("data-theme", "light");
+  }());
+</script>
+
+<!-- Support for MathJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->

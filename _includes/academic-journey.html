@@ -1,0 +1,56 @@
+<section class="home-section academic-journey" aria-labelledby="journey-heading" data-journey>
+  <div class="journey-heading">
+    <div>
+      <p class="home-eyebrow">Places that shaped my research</p>
+      <h2 id="journey-heading">An academic journey.<br>Across disciplines. Across the Pacific.</h2>
+    </div>
+    <p>From medical images to brain health.<br>Now based in Beijing.</p>
+  </div>
+
+  <div class="journey-atlas">
+    <div class="journey-map" aria-label="Academic locations in Beijing, Los Angeles, and Washington, D.C.">
+      <svg viewBox="0 0 1000 440" aria-hidden="true" focusable="false">
+        <defs><pattern id="atlas-grid" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="currentColor" opacity=".16"/></pattern></defs>
+        <rect width="1000" height="440" fill="url(#atlas-grid)"/>
+        <g class="journey-land">{% include journey-land.svg %}</g>
+        <path class="journey-route" d="M869 138 Q650 -40 406 135 Q570 5 755 153"/>
+        <circle class="journey-dot" data-city="beijing" cx="406" cy="135" r="6"/>
+        <circle class="journey-dot" data-city="la" cx="755" cy="153" r="6"/>
+        <circle class="journey-dot" data-city="dc" cx="869" cy="138" r="6"/>
+        <text class="journey-ocean" x="585" y="285" text-anchor="middle">PACIFIC OCEAN</text>
+      </svg>
+      <div class="journey-place journey-place--beijing"><span>Beijing</span><div><button data-select-place="pku" aria-pressed="true">PKU <i aria-hidden="true"></i></button><button data-select-place="tsinghua" aria-pressed="false">Tsinghua</button></div></div>
+      <div class="journey-place journey-place--la"><span>Los Angeles</span><button data-select-place="usc" aria-pressed="false">USC</button></div>
+      <div class="journey-place journey-place--dc"><span>Washington, D.C.</span><button data-select-place="gwu" aria-pressed="false">GWU</button></div>
+      <span class="journey-map-caption">Three cities. One continuing curiosity.</span>
+    </div>
+    <div class="journey-detail" id="journey-detail" aria-live="polite" aria-atomic="true">
+      {% assign current = site.data.journey | last %}
+      <p class="journey-status" data-detail-period>{{ current.period }} · {{ current.city }}</p>
+      <h3 data-detail-name>{{ current.name }}</h3>
+      <p class="journey-role" data-detail-role>{{ current.role }}</p>
+      <p data-detail-description>{{ current.description }}</p>
+      <a class="home-link" data-detail-link href="{{ current.url }}">Visit institution</a>
+    </div>
+  </div>
+
+  <div class="journey-campuses" aria-label="Explore my academic experience">
+    {% for place in site.data.journey %}
+    <article class="campus-card{% if place.id == 'pku' %} is-selected{% endif %}" data-campus="{{ place.id }}">
+      <button class="campus-select" data-select-place="{{ place.id }}" aria-pressed="{% if place.id == 'pku' %}true{% else %}false{% endif %}" aria-controls="journey-detail">
+        <span class="campus-photo"><img src="{{ base_path }}/images/journey/{{ place.image }}" alt="{{ place.alt }}" loading="lazy" decoding="async" width="600" height="400"><span class="campus-period">{{ place.period }}</span></span>
+        <span class="campus-info"><span class="campus-city">{{ place.city }}</span><strong>{{ place.short }}</strong><span class="campus-role">{{ place.role }}</span><span class="campus-topic">{{ place.topic }}</span><span class="campus-explore" aria-hidden="true">↗</span></span>
+      </button>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="journey-footnote">Also along the way: Visiting Scholar at Harvard Medical School &amp; Massachusetts General Hospital, 2023.</p>
+  <details class="journey-credits"><summary>Photography &amp; map credits</summary><ul>
+    {% for place in site.data.journey %}
+    <li>{{ place.short }}: <a href="{{ place.source }}">{{ place.photographer }} / Wikimedia Commons</a> · <a href="{{ place.license_url }}">{{ place.license }}</a>. Resized; cropped for display. Photo adaptations retain the stated license.</li>
+    {% endfor %}
+    <li>Map: <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a>, public domain. Location overview; connecting arcs are schematic.</li>
+  </ul></details>
+  <script type="application/json" data-journey-data>{{ site.data.journey | jsonify }}</script>
+</section>
+<script src="{{ base_path }}/assets/js/journey.js" defer></script>

@@ -1,0 +1,17 @@
+{% assign figures = site.data.research_figures[include.group] %}
+<figure class="research-figure" data-research-gallery>
+  <div class="research-window"><div class="research-track" id="research-{{ include.group }}-images">
+    {% for figure in figures %}
+    <a class="research-image-link" href="{{ base_path }}/pictures/{{ figure.file }}?view=full" data-research-slide data-caption="{{ figure.caption | escape }}" aria-label="Enlarge: {{ figure.caption | escape }}"{% unless forloop.first %} aria-hidden="true" inert{% endunless %}>
+      <img src="{{ base_path }}/pictures/{{ figure.file }}" alt="{{ figure.alt }}" width="{{ figure.width }}" height="{{ figure.height }}" loading="lazy">
+      <span class="research-zoom" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+    <button class="research-arrow research-arrow--prev" type="button" data-research-prev aria-label="Previous research image" aria-controls="research-{{ include.group }}-images">‹</button>
+    <button class="research-arrow research-arrow--next" type="button" data-research-next aria-label="Next research image" aria-controls="research-{{ include.group }}-images">›</button>
+  </div>
+  <figcaption>
+    <span data-research-caption>{{ figures.first.caption }}</span>
+  </figcaption>
+</figure>

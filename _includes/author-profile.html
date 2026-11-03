@@ -1,0 +1,37 @@
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
+{% endif %}
+
+<div class="profile-card" itemscope itemtype="http://schema.org/Person">
+  <div class="author__avatar">
+    {% if author.avatar contains "://" %}
+      <img src="{{ author.avatar }}" alt="{{ author.name }}">
+    {% else %}
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
+    {% endif %}
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">{{ author.name }}</h3>
+    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.location or author.employer %}
+      <p class="author__meta">
+        {% if author.location %}{{ author.location }}{% endif %}
+        {% if author.location and author.employer %} / {% endif %}
+        {% if author.employer %}{{ author.employer }}{% endif %}
+      </p>
+    {% endif %}
+  </div>
+
+  <nav class="profile-links" aria-label="Profile links">
+    {% if author.email %}<a href="mailto:{{ author.email }}">Email</a>{% endif %}
+    {% if author.googlescholar %}<a href="{{ author.googlescholar }}">Google Scholar</a>{% endif %}
+    {% if author.orcid %}<a href="{{ author.orcid }}">ORCID</a>{% endif %}
+    {% if author.pubmed %}<a href="{{ author.pubmed }}">PubMed</a>{% endif %}
+    {% if author.linkedin %}<a href="https://www.linkedin.com/in/{{ author.linkedin }}">LinkedIn</a>{% endif %}
+  </nav>
+</div>

@@ -1,0 +1,63 @@
+- id: gwu
+  short: GWU
+  name: George Washington University
+  city: Washington, D.C.
+  role: Master's degree
+  period: "2020"
+  topic: Medical image analysis
+  description: My master's research focused on AI-based tumor segmentation in medical images, supervised by Prof. Murray Loew.
+  url: https://www.gwu.edu/
+  image: gwu.jpg
+  alt: Lisner Hall seen from University Yard at George Washington University
+  photographer: APK
+  source: https://commons.wikimedia.org/wiki/File:Lisner_Hall_-_University_Yard_entrance.jpg
+  license: CC BY 4.0
+  license_url: https://creativecommons.org/licenses/by/4.0/
+- id: tsinghua
+  short: Tsinghua
+  name: Tsinghua University
+  city: Beijing
+  role: Ph.D.
+  period: "2024"
+  topic: Stroke recovery & rehabilitation
+  description: My doctoral research investigated AI methods for predicting and understanding motor recovery after stroke, supervised by Prof. Linhong Ji.
+  url: https://www.tsinghua.edu.cn/en/
+  image: tsinghua.jpg
+  personal_photo: /pictures/thu3.jpg
+  alt: The sundial inscribed with actions speak louder than words at Tsinghua University, photographed by Ping-Ju Lin
+  photographer: Wwbread
+  source: https://commons.wikimedia.org/wiki/File:TsinghuaUniversityGate.JPG
+  license: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+- id: usc
+  short: USC
+  name: University of Southern California
+  city: Los Angeles
+  role: Postdoctoral Scholar
+  period: Previously
+  topic: Neuroimaging & Alzheimer's disease
+  description: At the Laboratory of NeuroImaging, I worked with Prof. Arthur W. Toga on AI and machine-learning models to better understand Alzheimer's disease.
+  url: https://loni.usc.edu/
+  image: usc.jpg
+  personal_photo: /pictures/usc2.jpg
+  alt: Tommy Trojan and the brick campus buildings at USC, photographed by Ping-Ju Lin
+  photographer: Padsquad19
+  source: https://commons.wikimedia.org/wiki/File:Doheny_Library.jpg
+  license: CC BY-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-sa/3.0/
+- id: pku
+  short: PKU
+  name: Peking University
+  city: Beijing
+  role: Research Assistant Professor
+  period: Now
+  topic: AI for brain health
+  description: I develop machine-learning methods for biomedical data, connecting neuroimaging, clinical measurements, and rehabilitation outcomes.
+  url: https://english.pku.edu.cn/
+  image: pku.jpg
+  personal_photo: /pictures/pku2.jpg
+  alt: Boya Pagoda and Weiming Lake framed by pine branches, photographed by Ping-Ju Lin
+  photographer: Windmemories
+  source: https://commons.wikimedia.org/wiki/File:2017-05-05_Boya_Pagoda.jpg
+  license: CC BY-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-sa/4.0/

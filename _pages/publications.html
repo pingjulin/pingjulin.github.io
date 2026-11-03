@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% if site.author.googlescholar %}
+  <div class="scholar-callout">
+    <p>For the most current citation record and newly indexed papers, visit my Google Scholar profile.</p>
+    <a class="home-button" href="{{site.author.googlescholar}}">Google Scholar</a>
+  </div>
+{% endif %}
+{% include base_path %}
+<section class="publication-overview">
+  <h2>Publication Timeline</h2>
+  <div class="publication-timeline">
+    {% for paper in site.data.work %}
+    <article id="{{ paper.id }}">
+      <div class="publication-year">{{ paper.year }}</div>
+      <div class="publication-card"><img class="publication-image" src="{{ base_path }}{{ paper.image }}" alt="{{ paper.journal | escape }} journal cover"><div><h3>{{ paper.title }}</h3><p><em>{{ paper.journal }}</em>. {{ paper.description }}</p></div></div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

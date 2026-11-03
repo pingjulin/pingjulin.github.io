@@ -1,0 +1,23 @@
+[
+  {
+    "file": "eeg-prediction-model.webp",
+    "source_deck": "Postdoc_interview(Stanford).pptx",
+    "slide": 25,
+    "embedded_asset": "ppt/media/image63.png",
+    "processing": "Original proportions, white background for transparency, WebP compression. No scientific content cropped or redrawn."
+  },
+  {
+    "file": "eeg-shap-attribution.webp",
+    "source_deck": "Postdoc_interview(Stanford).pptx",
+    "slide": 31,
+    "embedded_asset": "ppt/media/image97.png",
+    "processing": "Original proportions, white background for transparency, WebP compression. No scientific content cropped or redrawn."
+  },
+  {
+    "file": "bci-rehabilitation.webp",
+    "source_deck": "Postdoc_interview(Stanford).pptx",
+    "slide": 24,
+    "embedded_asset": "ppt/media/image60.png",
+    "processing": "Original proportions, white background for transparency, WebP compression. No scientific content cropped or redrawn."
+  }
+]

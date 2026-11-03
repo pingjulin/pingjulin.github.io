@@ -1,0 +1,10 @@
+<section class="editorial-publications" id="work" aria-labelledby="selected-title" data-work-gallery>
+  <div class="ed-container ed-section-heading"><div><p class="ed-kicker">The work</p><h2 id="selected-title">Research in focus.</h2></div><div class="ed-motion-heading"><a class="ed-text-link" href="{{ base_path }}/publications/">All publications <span aria-hidden="true">→</span></a><div class="work-controls"><button class="work-arrow" data-work-prev aria-label="Previous publications">←</button><button class="work-arrow" data-work-next aria-label="Next publications">→</button><button class="ed-motion-toggle" type="button" data-work-motion aria-label="Pause publication scrolling" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button></div></div></div>
+  <div class="work-viewport" tabindex="0" aria-label="All publications. Scroll horizontally to explore.">
+    <div class="work-track">
+    {% for paper in site.data.work %}
+      <a class="ed-paper" href="{{ base_path }}/publications/#{{ paper.id }}"><div class="ed-paper-image"><img src="{{ base_path }}{{ paper.image }}" alt="{{ paper.journal | escape }} journal cover" width="300" height="400" loading="lazy"></div><span class="ed-kicker">{{ paper.year }}</span><h3>{{ paper.title }}</h3><span class="ed-paper-journal">{{ paper.journal }} <span aria-hidden="true">↗</span></span></a>
+    {% endfor %}
+    </div>
+  </div>
+</section>

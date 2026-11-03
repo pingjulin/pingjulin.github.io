@@ -1,0 +1,16 @@
+{% include base_path %}
+<a class="skip-link" href="{% if page.url == '/' %}#main-content{% else %}#main{% endif %}">Skip to content</a>
+<header class="masthead editorial-masthead">
+  <div class="editorial-banner">Research Assistant Professor <span>·</span> Peking University <span>·</span> Beijing, China</div>
+  <div class="editorial-brand-row">
+    <span class="brand-caption">Artificial intelligence<br>&amp; biomedical research</span>
+    <a class="editorial-brand" href="{{ base_path }}/" aria-label="Ping-Ju Lin homepage"><span class="brand-monogram" aria-hidden="true">PL</span><span>Ping-Ju Lin</span></a>
+    <a class="brand-contact" href="mailto:{{ site.author.email }}">Get in touch <span aria-hidden="true">↗</span></a>
+  </div>
+  <nav class="editorial-nav" aria-label="Main navigation">
+    <a href="{{ base_path }}/#about">About</a><a href="{{ base_path }}/#research">Research</a>
+    <a href="{{ base_path }}/publications/"{% if page.url == '/publications/' %} aria-current="page"{% endif %}>Publications</a>
+    <a href="{{ base_path }}/#experience">Experience</a>
+    <a href="{{ base_path }}/cv/"{% if page.url == '/cv/' %} aria-current="page"{% endif %}>Curriculum Vitae</a>
+  </nav>
+</header>

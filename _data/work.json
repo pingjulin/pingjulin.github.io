@@ -1,0 +1,122 @@
+[
+  {
+    "id": "paper-01",
+    "year": "2025",
+    "image": "/images/publications/TBME.jpg",
+    "title": "Structured and sparse partial least squares coherence for multivariate cortico-muscular analysis",
+    "journal": "IEEE Transactions on Biomedical Engineering",
+    "description": "A structured sparse coherence method for multivariate cortico-muscular analysis."
+  },
+  {
+    "id": "paper-02",
+    "year": "2025",
+    "image": "/images/publications/AD.jpg",
+    "title": "A vision-language foundation model for Alzheimer's disease diagnosis using MRI and clinical data",
+    "journal": "Alzheimer's & Dementia",
+    "description": "A multimodal foundation-model framework combining MRI and clinical data for Alzheimer's disease diagnosis."
+  },
+  {
+    "id": "paper-03",
+    "year": "2025",
+    "image": "/images/publications/TR.jpg",
+    "title": "Design, Modeling, and Application of Bioinspired High-Force-Output Soft Pneumatic Bending Actuator",
+    "journal": "IEEE Transactions on Robotics",
+    "description": "Bioinspired soft actuator design and modeling for high-force robotic applications."
+  },
+  {
+    "id": "paper-04",
+    "year": "2025",
+    "image": "/images/publications/TNSRE.jpg",
+    "title": "Multimodal behavioral data predict stroke patient's response to BCI treatment through explainable AI",
+    "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+    "description": "Explainable multimodal AI for predicting response to BCI-supported stroke rehabilitation."
+  },
+  {
+    "id": "paper-05",
+    "year": "2025",
+    "image": "/images/publications/TNSRE.jpg",
+    "title": "Beta-band corticomuscular coherence: a novel biomarker of functional corticospinal tract integrity and motor recovery after stroke",
+    "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+    "description": "Beta-band corticomuscular coherence as a biomarker of corticospinal integrity and motor recovery."
+  },
+  {
+    "id": "paper-06",
+    "year": "2025",
+    "image": "/images/publications/AOL.jpg",
+    "title": "Development and validation of a collaborative framework for assessment of peripheral facial paralysis using facial image regions of interest",
+    "journal": "Acta Oto-Laryngologica",
+    "description": "A facial image ROI framework for peripheral facial paralysis assessment."
+  },
+  {
+    "id": "paper-07",
+    "year": "2025",
+    "image": "/images/publications/AM.jpg",
+    "title": "Bioinspired smart triboelectric soft pneumatic actuator-enabled hand rehabilitation robot",
+    "journal": "Advanced Materials",
+    "description": "A smart soft pneumatic actuator-enabled robotic system for hand rehabilitation."
+  },
+  {
+    "id": "paper-08",
+    "year": "2024",
+    "image": "/images/publications/Neurocomputing.jpg",
+    "title": "AM-EEGNet: An advanced multi-input deep learning framework for classifying stroke patient EEG task states",
+    "journal": "Neurocomputing",
+    "description": "Multi-input EEG deep learning for stroke-patient task-state classification and model interpretation."
+  },
+  {
+    "id": "paper-09",
+    "year": "2024",
+    "image": "/images/publications/TNSRE.jpg",
+    "title": "Explainable deep-learning prediction for brain-computer interfaces supported lower extremity motor gains based on multistate fusion",
+    "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+    "description": "Multi-state EEG fusion for explainable BCI rehabilitation outcome prediction."
+  },
+  {
+    "id": "paper-10",
+    "year": "2024",
+    "image": "/images/publications/MSSE.jpg",
+    "title": "Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise",
+    "journal": "Medicine & Science in Sports & Exercise",
+    "description": "A study of motor-respiratory coupling and endurance performance."
+  },
+  {
+    "id": "paper-11",
+    "year": "2023",
+    "image": "/images/publications/JBHI.jpg",
+    "title": "Multiscale canonical coherence for functional corticomuscular coupling analysis",
+    "journal": "IEEE Journal of Biomedical and Health Informatics",
+    "description": "A multiscale framework for functional corticomuscular coupling analysis."
+  },
+  {
+    "id": "paper-12",
+    "year": "2023",
+    "image": "/images/publications/JNER.jpg",
+    "title": "Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke",
+    "journal": "Journal of NeuroEngineering and Rehabilitation",
+    "description": "EEG activation patterns after sensory stimulation in subacute stroke."
+  },
+  {
+    "id": "paper-13",
+    "year": "2022",
+    "image": "/images/publications/JBHI.jpg",
+    "title": "A transferable deep learning prognosis model for predicting stroke patients' recovery in different rehabilitation trainings",
+    "journal": "IEEE Journal of Biomedical and Health Informatics",
+    "description": "Transferable prognosis modeling for stroke recovery across rehabilitation settings."
+  },
+  {
+    "id": "paper-14",
+    "year": "2021",
+    "image": "/images/publications/TNSRE.jpg",
+    "title": "CNN-based prognosis of BCI rehabilitation using EEG from first session BCI training",
+    "journal": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
+    "description": "Early-session EEG prediction of BCI rehabilitation prognosis."
+  },
+  {
+    "id": "paper-15",
+    "year": "2021",
+    "image": "/images/publications/AppliedScience.jpg",
+    "title": "Quantitative assessment of motor function by an end-effector upper limb rehabilitation robot based on admittance control",
+    "journal": "Applied Sciences",
+    "description": "Robot-assisted quantitative assessment of upper-limb motor function."
+  }
+]

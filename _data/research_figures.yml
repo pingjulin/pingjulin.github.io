@@ -1,0 +1,38 @@
+neu:
+  - file: neu1.png
+    caption: MRI and clinical text representation learning
+    alt: MRI brain images and clinical text paired through image and text encoders in a contrastive learning framework
+    width: 970
+    height: 438
+  - file: neu2.png
+    caption: Vision-language inference for Alzheimer's disease
+    alt: A vision-language model comparing an MRI scan against text descriptions of Alzheimer's disease, mild cognitive impairment, and normal condition
+    width: 782
+    height: 320
+exp:
+  - file: exp1.png
+    caption: EEG features and model attribution across recovery groups
+    alt: Power spectral density maps and functional connectivity attribution compared between good and poor recovery groups
+    width: 1350
+    height: 648
+  - file: exp2.png
+    caption: SHAP attribution of spectral and connectivity features
+    alt: Spectral curves, scalp maps, and connectivity diagrams summarizing SHAP values for eyes-closed and eyes-open EEG
+    width: 1334
+    height: 658
+  - file: exp3.png
+    caption: Saliency maps for neural feature interpretation
+    alt: EEG power topographies and functional connectivity saliency maps for three subjects with a model interpretation diagram
+    width: 816
+    height: 568
+rec:
+  - file: rec1.png
+    caption: Upper-limb BCI rehabilitation and experimental protocol
+    alt: Customized upper-limb robotic rehabilitation with EEG recording, task timing, and motor function assessment
+    width: 1288
+    height: 648
+  - file: rec2.png
+    caption: Resting-state EEG and lower-limb rehabilitation
+    alt: Eyes-closed and eyes-open resting-state EEG acquisition followed by two weeks of lower-limb rehabilitation and recovery evaluation
+    width: 1352
+    height: 514
