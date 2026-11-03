@@ -1,0 +1,68 @@
+/* Academic journey: geographic context and a small, browsable campus gallery. */
+.academic-journey { --journey-accent: #00736a; }
+html[data-theme="dark"] .academic-journey { --journey-accent: #74c8bb; }
+.journey-heading { margin-bottom: 1.8rem; }
+.journey-heading .home-eyebrow { color: var(--journey-accent); font-size: .7rem; text-align: left; }
+.journey-heading h2 { margin: 0 0 .7rem; font-size: clamp(1.8rem, 3.4vw, 2.5rem); letter-spacing: -.04em; line-height: 1.1; }
+.journey-heading > p { margin: 0; font-size: .92rem; text-align: left; line-height: 1.5; }
+.journey-atlas { overflow: hidden; border: 1px solid var(--site-border); border-radius: 24px; background: var(--site-panel-solid); box-shadow: var(--site-shadow); }
+.journey-map { position: relative; overflow: hidden; background: #eaf0ed; color: #526e64; isolation: isolate; }
+html[data-theme="dark"] .journey-map { background: #14231f; color: #8caaa0; }
+.journey-map > svg { display: block; width: 100%; height: auto; overflow: hidden; }
+.journey-land { fill: #cedcd4; stroke: #eaf0ed; stroke-width: .7; }
+html[data-theme="dark"] .journey-land { fill: #2e463d; stroke: #14231f; }
+.journey-route { fill: none; stroke: var(--journey-accent); stroke-width: 1.5; stroke-dasharray: 5 6; opacity: .45; }
+.journey-dot { fill: var(--site-panel-solid); stroke: var(--journey-accent); stroke-width: 3; }
+.journey-dot.is-selected { fill: var(--journey-accent); stroke-width: 5; }
+.journey-ocean { fill: currentColor; font-family: inherit; font-size: 11px; letter-spacing: 4px; opacity: .55; }
+.journey-place { position: absolute; display: grid; gap: 3px; transform: translateX(-50%); text-align: center; }
+.journey-place--beijing { left: 40.6%; top: 35%; }
+.journey-place--la { left: 75.5%; top: 43%; }
+.journey-place--dc { left: 88%; top: 17%; }
+.journey-place > span { font-size: .64rem; font-weight: 600; white-space: nowrap; }
+.journey-place > div { display: flex; gap: 3px; }
+.journey-place button { position: static; display: inline-flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: auto; min-height: 32px; padding: 4px 10px; font: 600 .64rem/1.2 inherit; font-family: inherit; font-size: .64rem; color: var(--site-text); background: var(--site-panel-solid); border: 1px solid var(--site-border); border-radius: 99px; cursor: pointer; box-shadow: 0 2px 8px #0000000d; transition: transform 120ms ease-out; }
+.journey-place button[aria-pressed="true"] { background: var(--journey-accent); border-color: var(--journey-accent); color: var(--site-panel-solid); }
+.journey-place button:active { transform: scale(.95); }
+.journey-place i { width: 4px; height: 4px; background: currentColor; border-radius: 50%; }
+.journey-map-caption { position: absolute; left: 24px; bottom: 16px; font-size: .62rem; letter-spacing: .02em; }
+.journey-detail { display: grid; grid-template-columns: 1fr 1.1fr; column-gap: 2rem; padding: 1.5rem 1.8rem; min-height: 12rem; }
+.journey-detail .journey-status { grid-column: 1; margin: 0 0 .5rem; color: var(--journey-accent); font-size: .68rem; font-weight: 650; text-align: left; }
+.journey-detail h3 { grid-column: 1; margin: 0 0 .45rem; font-size: 1.3rem; line-height: 1.1; letter-spacing: -.03em; }
+.journey-detail .journey-role { grid-column: 1; margin: 0; font-size: .75rem; text-align: left; }
+.journey-detail [data-detail-description] { grid-column: 2; grid-row: 1 / 4; margin: 0; font-size: .85rem; text-align: left; line-height: 1.65; hyphens: none; }
+.journey-detail > a { grid-column: 2; margin-top: .7rem; align-self: end; font-size: .75rem; }
+.journey-campuses { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; margin-top: 1rem; }
+.campus-card { overflow: hidden; border: 1px solid var(--site-border); border-radius: 17px; background: var(--site-panel-solid); transition: box-shadow 220ms ease, border-color 220ms ease; }
+.campus-card.is-selected { border-color: var(--journey-accent); box-shadow: 0 0 0 1px var(--journey-accent); }
+.campus-select { position: relative; display: block; width: 100%; height: 100%; padding: 0; color: var(--site-text); background: transparent; border: 0; font: inherit; text-align: left; cursor: pointer; }
+.campus-select:focus-visible { outline-offset: -4px; border-radius: 16px; }
+.campus-photo { position: relative; display: block; overflow: hidden; aspect-ratio: 1.25; background: var(--site-border); }
+.campus-photo img { display: block; width: 100%; height: 100%; margin: 0; object-fit: cover; transition: transform 500ms cubic-bezier(.2,.8,.2,1); }
+.campus-photo::after { content: ""; position: absolute; inset: 50% 0 0; background: linear-gradient(transparent, #0007); pointer-events: none; }
+.campus-period { position: absolute; bottom: 10px; left: 12px; z-index: 1; color: white; font-size: .64rem; font-weight: 600; }
+.campus-info { position: relative; display: grid; gap: .22rem; padding: .85rem .7rem 1rem; }
+.campus-city { color: var(--site-muted); font-size: .6rem; }
+.campus-info strong { font-size: 1.25rem; font-weight: 650; line-height: 1.15; letter-spacing: -.025em; }
+.campus-role { color: var(--site-text); font-size: .64rem; line-height: 1.4; min-height: 2.8em; }
+.campus-topic { color: var(--site-muted); font-size: .6rem; line-height: 1.4; }
+.campus-explore { position: absolute; top: .8rem; right: .6rem; color: var(--journey-accent); font-size: .8rem; }
+.journey-footnote { margin: 1.1rem 0 .6rem; font-size: .72rem !important; text-align: left !important; }
+.journey-credits { font-size: .62rem; color: var(--site-muted); }
+.journey-credits summary { cursor: pointer; width: fit-content; padding: .3rem 0; }
+.journey-credits ul { margin: .6rem 0 0; padding-left: 1.2em; }
+.journey-credits li { font-size: .62rem; margin-bottom: .35rem; }
+@media (hover: hover) { .campus-select:hover .campus-photo img { transform: scale(1.045); } .campus-card:hover { box-shadow: var(--site-shadow); } }
+@media screen and (max-width: 640px) {
+  .journey-campuses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .journey-detail { grid-template-columns: 1fr; padding: 1.2rem; min-height: 0; }
+  .journey-detail [data-detail-description] { grid-column: 1; grid-row: auto; margin-top: 1rem; }
+  .journey-detail > a { grid-column: 1; }
+  .journey-map > svg { width: 165%; max-width: none; margin-left: -50%; }
+  .journey-place--beijing { left: 17%; top: 35%; }
+  .journey-place--la { left: 74.6%; top: 43%; }
+  .journey-place--dc { left: 94%; top: 12%; transform: translateX(-80%); }
+  .journey-map-caption { left: 14px; bottom: 12px; font-size: .55rem; }
+  .campus-photo { aspect-ratio: 1.5; }
+  .campus-info { padding: .9rem; }
+}
