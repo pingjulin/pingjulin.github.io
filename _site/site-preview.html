@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ping-Ju Lin Website Preview</title>
+  <style>
+    :root {
+      --bg: #fbfbfd;
+      --panel: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #e8e8ed;
+      --link: #0066cc;
+      --link-hover: #004c99;
+    }
+
+    html[data-theme="dark"] {
+      --bg: #000000;
+      --panel: #111111;
+      --text: #f5f5f7;
+      --muted: #a1a1a6;
+      --line: #2c2c2e;
+      --link: #8ab4f8;
+      --link-hover: #c8ddff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid var(--line);
+      -webkit-backdrop-filter: saturate(180%) blur(18px);
+      backdrop-filter: saturate(180%) blur(18px);
+    }
+
+    .nav-inner {
+      max-width: 1160px;
+      min-height: 56px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 13px;
+    }
+
+    .nav-links a,
+    .theme-toggle {
+      line-height: 28px;
+    }
+
+    .nav-links a { color: var(--text); }
+
+    .theme-toggle {
+      min-height: 28px;
+      padding: 0 12px;
+      color: var(--text);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .shell {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+      display: grid;
+      grid-template-columns: 180px minmax(0, 820px);
+      gap: 64px;
+      align-items: start;
+    }
+
+    .profile {
+      position: sticky;
+      top: 88px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 18px;
+      border-radius: 50%;
+    }
+
+    .profile h2 {
+      margin: 0 0 6px;
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .profile p { margin: 0 0 14px; }
+    .profile-links { display: grid; gap: 7px; }
+
+    .view { display: none; }
+    .view.is-active { display: block; }
+
+    .hero { padding: 6px 0 40px; }
+
+    .identity {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .identity strong { color: var(--text); }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .section {
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section h2 { margin: 0 0 20px; font-size: 24px; }
+    .section p { color: var(--muted); line-height: 1.7; }
+    .section p, .paper-card p { text-align: justify; text-justify: inter-word; }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 178px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .card h3 { margin: 0 0 10px; font-size: 17px; }
+    .card p { margin: 0; font-size: 15px; line-height: 1.6; }
+    .focus-grid .card p { text-align: left; }
+
+    .scholar-callout {
+      padding: 20px 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 18px;
+      color: #fff;
+      background: var(--link);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .button:hover { color: #fff; background: var(--link-hover); }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 16px;
+      padding-left: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 6px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .paper {
+      position: relative;
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .paper::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -22px;
+      width: 9px;
+      height: 9px;
+      background: var(--bg);
+      border: 2px solid var(--link);
+      border-radius: 50%;
+    }
+
+    .year {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .paper-card {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 18px;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .image-slot {
+      width: 92px;
+      height: 122px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      background:
+        linear-gradient(135deg, transparent 49%, var(--line) 50%, transparent 51%),
+        linear-gradient(45deg, transparent 49%, var(--line) 50%, transparent 51%),
+        var(--bg);
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .journal-cover {
+      display: block;
+      width: 92px;
+      height: 122px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .paper-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .paper-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .cv-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      min-height: 78vh;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    footer {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 28px 24px 42px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; gap: 32px; }
+      .profile { position: static; display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 18px; align-items: center; }
+      .avatar { width: 82px; height: 82px; margin: 0; }
+      .profile-links { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      h1 { font-size: 34px; }
+      .lead { font-size: 18px; }
+      .focus-grid, .paper, .paper-card { grid-template-columns: 1fr; }
+      .journal-cover, .image-slot { justify-self: start; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-inner { align-items: flex-start; padding-top: 12px; padding-bottom: 12px; flex-direction: column; gap: 10px; }
+      .brand { font-size: 15px; }
+      .nav-links { gap: 14px; flex-wrap: wrap; }
+      .shell { padding-left: 18px; padding-right: 18px; }
+      h1 { font-size: 28px; }
+      .paper-card { gap: 14px; padding: 15px; }
+      .journal-cover, .image-slot { width: 78px; height: 104px; justify-self: center; }
+      .paper-card p { text-align: left; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home" data-view-link="home">Ping-Ju Lin's Homepage</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#publications" data-view-link="publications">Publications</a>
+        <a href="#cv" data-view-link="cv">CV</a>
+        <button class="theme-toggle" id="themeToggle" type="button">Dark</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="profile" aria-label="Profile">
+      <img class="avatar" src="images/profile.png" alt="Ping-Ju Lin">
+      <div>
+        <h2>Ping-Ju Lin</h2>
+        <p>Research Assistant Professor</p>
+        <p>Beijing, China<br>Peking University</p>
+      </div>
+      <div class="profile-links">
+        <a href="mailto:pjlin14@gmail.com">Email</a>
+        <a href="https://scholar.google.com/citations?user=jVV313IAAAAJ&hl=en">Google Scholar</a>
+        <a href="#">ORCID</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="view is-active" data-view="home">
+        <div class="hero">
+          <div class="identity">
+            <strong>Ping-Ju Lin</strong>
+            <span>Research Assistant Professor · Peking University</span>
+          </div>
+          <p class="eyebrow">Research Direction</p>
+          <h1>AI for biomedical data, neuroimaging, and recovery prediction.</h1>
+          <p class="lead">I develop machine-learning models that connect MRI, EEG, clinical measurements, and behavioral data with neurological disease mechanisms and rehabilitation outcomes.</p>
+        </div>
+
+        <section class="section">
+          <h2>About Me</h2>
+          <p>I'm a Research Assistant Professor at Peking University. My work focuses on AI and machine learning for biomedical data, especially neuroimaging, Alzheimer's disease diagnosis, stroke recovery prediction, and brain-computer-interface supported rehabilitation. Previously, I was a Postdoctoral Scholar in the <a href="https://loni.usc.edu/">Laboratory of NeuroImaging</a> of <a href="https://keck.usc.edu/faculty-search/arthur-w-toga/">Prof. Arthur W. Toga</a> at the <a href="https://keck.usc.edu/">Keck School of Medicine, University of Southern California</a>, where my research centered on developing and improving AI/ML models for biomedical data to better understand the mechanisms of Alzheimer's disease.</p>
+          <p>I received my Ph.D. at Tsinghua University in 2024, supervised by <a href="https://www.me.tsinghua.edu.cn/en/info/1051/1325.htm">Prof. Linhong Ji</a>. During my Ph.D., I was a Visiting Scholar at Harvard Medical School and the <a href="https://ltnr.mgh.harvard.edu/">Laboratory for Translational Neurorecovery</a> of <a href="https://www.massgeneral.org/doctors/20937/david-lin">David Lin, MD</a>, at Massachusetts General Hospital in 2023. My Ph.D. thesis focused on designing and applying artificial intelligence methods to predict and uncover stroke patients' motor recovery based on neurological changes.</p>
+          <p>I earned my master's degree at George Washington University in 2020, supervised by <a href="https://bme.engineering.gwu.edu/murray-loew">Prof. Murray Loew</a> at the <a href="https://loewlab.seas.gwu.edu/">Medical Imaging &amp; Image Analysis Laboratory</a>. My master's work focused on AI-based medical imaging for tumor segmentation.</p>
+        </section>
+
+        <section class="section">
+          <h2>Research Focus</h2>
+          <div class="focus-grid">
+            <article class="card">
+              <h3>Neuroimaging and Clinical AI</h3>
+              <p>Developing multimodal models for MRI, clinical data, and neurological disease diagnosis.</p>
+            </article>
+            <article class="card">
+              <h3>Explainable Biomedical Models</h3>
+              <p>Designing interpretable learning frameworks that map predictions back to clinically meaningful signals.</p>
+            </article>
+            <article class="card">
+              <h3>Stroke Recovery and BCI</h3>
+              <p>Predicting rehabilitation response from EEG, biomechanics, behavioral measures, and corticomuscular coupling.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" data-view="publications">
+        <section class="section" style="border-top:0; padding-top:6px;">
+          <h1>Publications</h1>
+          <div class="scholar-callout">
+            <p>For the full citation record and newly indexed papers, visit Google Scholar.</p>
+            <a class="button" href="https://scholar.google.com/citations?user=jVV313IAAAAJ&hl=en">Google Scholar</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Publication Timeline</h2>
+          <div class="timeline">
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/TBME.jpg" alt="IEEE Transactions on Biomedical Engineering journal cover"><div><h3>Structured and sparse partial least squares coherence for multivariate cortico-muscular analysis</h3><p><em>IEEE Transactions on Biomedical Engineering.</em> A structured sparse coherence method for multivariate cortico-muscular analysis.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/AD.jpg" alt="Alzheimer's & Dementia journal cover"><div><h3>A vision-language foundation model for Alzheimer's disease diagnosis using MRI and clinical data</h3><p><em>Alzheimer's & Dementia.</em> A multimodal foundation-model framework combining MRI and clinical data for Alzheimer's disease diagnosis.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/TR.jpg" alt="IEEE Transactions on Robotics journal cover"><div><h3>Design, Modeling, and Application of Bioinspired High-Force-Output Soft Pneumatic Bending Actuator</h3><p><em>IEEE Transactions on Robotics.</em> Bioinspired soft actuator design and modeling for high-force robotic applications.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover"><div><h3>Multimodal behavioral data predict stroke patient's response to BCI treatment through explainable AI</h3><p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering.</em> Explainable multimodal AI for predicting response to BCI-supported stroke rehabilitation.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover"><div><h3>Beta-band corticomuscular coherence: a novel biomarker of functional corticospinal tract integrity and motor recovery after stroke</h3><p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering.</em> Beta-band corticomuscular coherence as a biomarker of corticospinal integrity and motor recovery.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/AOL.jpg" alt="Acta Oto-Laryngologica journal cover"><div><h3>Development and validation of a collaborative framework for assessment of peripheral facial paralysis using facial image regions of interest</h3><p><em>Acta Oto-Laryngologica.</em> A facial image ROI framework for peripheral facial paralysis assessment.</p></div></div></article>
+            <article class="paper"><div class="year">2025</div><div class="paper-card"><img class="journal-cover" src="images/publications/AM.jpg" alt="Advanced Materials journal cover"><div><h3>Bioinspired smart triboelectric soft pneumatic actuator-enabled hand rehabilitation robot</h3><p><em>Advanced Materials.</em> A smart soft pneumatic actuator-enabled robotic system for hand rehabilitation.</p></div></div></article>
+            <article class="paper"><div class="year">2024</div><div class="paper-card"><img class="journal-cover" src="images/publications/Neurocomputing.jpg" alt="Neurocomputing journal cover"><div><h3>AM-EEGNet: An advanced multi-input deep learning framework for classifying stroke patient EEG task states</h3><p><em>Neurocomputing.</em> Multi-input EEG deep learning for stroke-patient task-state classification and model interpretation.</p></div></div></article>
+            <article class="paper"><div class="year">2024</div><div class="paper-card"><img class="journal-cover" src="images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover"><div><h3>Explainable deep-learning prediction for brain-computer interfaces supported lower extremity motor gains based on multistate fusion</h3><p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering.</em> Multi-state EEG fusion for explainable BCI rehabilitation outcome prediction.</p></div></div></article>
+            <article class="paper"><div class="year">2024</div><div class="paper-card"><img class="journal-cover" src="images/publications/MSSE.jpg" alt="Medicine & Science in Sports & Exercise journal cover"><div><h3>Motor-Respiratory Coupling Improves Endurance Performance during Rhythmic Isometric Handgrip Exercise</h3><p><em>Medicine & Science in Sports & Exercise.</em> A study of motor-respiratory coupling and endurance performance.</p></div></div></article>
+            <article class="paper"><div class="year">2023</div><div class="paper-card"><img class="journal-cover" src="images/publications/JBHI.jpg" alt="IEEE Journal of Biomedical and Health Informatics journal cover"><div><h3>Multiscale canonical coherence for functional corticomuscular coupling analysis</h3><p><em>IEEE Journal of Biomedical and Health Informatics.</em> A multiscale framework for functional corticomuscular coupling analysis.</p></div></div></article>
+            <article class="paper"><div class="year">2023</div><div class="paper-card"><img class="journal-cover" src="images/publications/JNER.jpg" alt="Journal of NeuroEngineering and Rehabilitation journal cover"><div><h3>Lesion-specific cortical activation following sensory stimulation in patients with subacute stroke</h3><p><em>Journal of NeuroEngineering and Rehabilitation.</em> EEG activation patterns after sensory stimulation in subacute stroke.</p></div></div></article>
+            <article class="paper"><div class="year">2022</div><div class="paper-card"><img class="journal-cover" src="images/publications/JBHI.jpg" alt="IEEE Journal of Biomedical and Health Informatics journal cover"><div><h3>A transferable deep learning prognosis model for predicting stroke patients' recovery in different rehabilitation trainings</h3><p><em>IEEE Journal of Biomedical and Health Informatics.</em> Transferable prognosis modeling for stroke recovery across rehabilitation settings.</p></div></div></article>
+            <article class="paper"><div class="year">2021</div><div class="paper-card"><img class="journal-cover" src="images/publications/TNSRE.jpg" alt="IEEE Transactions on Neural Systems and Rehabilitation Engineering journal cover"><div><h3>CNN-based prognosis of BCI rehabilitation using EEG from first session BCI training</h3><p><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering.</em> Early-session EEG prediction of BCI rehabilitation prognosis.</p></div></div></article>
+            <article class="paper"><div class="year">2021</div><div class="paper-card"><img class="journal-cover" src="images/publications/AppliedScience.jpg" alt="Applied Sciences journal cover"><div><h3>Quantitative assessment of motor function by an end-effector upper limb rehabilitation robot based on admittance control</h3><p><em>Applied Sciences.</em> Robot-assisted quantitative assessment of upper-limb motor function.</p></div></div></article>
+          </div>
+        </section>
+      </section>
+
+      <section class="view" data-view="cv">
+        <section class="section" style="border-top:0; padding-top:6px;">
+          <h1>CV</h1>
+          <p class="lead">The PDF opens directly in the browser's built-in PDF viewer.</p>
+          <div class="cv-actions">
+            <a class="button" href="assets/Ping-Ju%20Lin_CV.pdf">Open PDF</a>
+            <a href="assets/Ping-Ju%20Lin_CV.pdf" download>Download CV</a>
+          </div>
+          <iframe class="pdf-frame" src="assets/Ping-Ju%20Lin_CV.pdf#toolbar=1&navpanes=0" title="Ping-Ju Lin CV"></iframe>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <footer>© 2026 Ping-Ju Lin. Preview page for local review.</footer>
+
+  <script>
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      themeToggle.textContent = next === "dark" ? "Light" : "Dark";
+    });
+
+    function showView(name) {
+      document.querySelectorAll("[data-view]").forEach((view) => {
+        view.classList.toggle("is-active", view.dataset.view === name);
+      });
+      window.location.hash = name === "home" ? "" : name;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    document.querySelectorAll("[data-view-link]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        showView(link.dataset.viewLink);
+      });
+    });
+
+    const initial = window.location.hash.replace("#", "") || "home";
+    if (["home", "publications", "cv"].includes(initial)) showView(initial);
+  </script>
+</body>
+</html>
